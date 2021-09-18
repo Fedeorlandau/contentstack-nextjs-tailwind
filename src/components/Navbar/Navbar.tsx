@@ -16,6 +16,8 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const solutions = [
   {
@@ -104,14 +106,18 @@ export default function Navbar(): JSX.Element {
       <div className="mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="/">
-              <span className="sr-only">Workflow</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
-              />
-            </a>
+            <Link href="/">
+              <a>
+                <span className="sr-only">Workflow</span>
+                <Image
+                  className="h-8 w-auto sm:h-10"
+                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                  alt=""
+                  width="50"
+                  height="50"
+                />
+              </a>
+            </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -195,18 +201,16 @@ export default function Navbar(): JSX.Element {
               )}
             </Popover>
 
-            <a
-              href="/test"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Test
-            </a>
-            <a
-              href="/test"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Docs
-            </a>
+            <Link href="/test">
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Test
+              </a>
+            </Link>
+            <Link href="/test">
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Docs
+              </a>
+            </Link>
 
             <Popover className="relative">
               {({ open }) => (
@@ -333,10 +337,12 @@ export default function Navbar(): JSX.Element {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
+                  <Image
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                     alt="Workflow"
+                    height="50"
+                    width="50"
                   />
                 </div>
                 <div className="-mr-2">

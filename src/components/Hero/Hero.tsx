@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Image from 'next/image'
+
 export interface HeroProps {
   title: string
   description: string
@@ -26,11 +28,13 @@ export default function Hero(props: HeroProps): JSX.Element {
             </button>
           </a>
         </div>
-        <img
-          className="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0"
+        <Image
           src="https://i.ibb.co/9GMTkW3/desktop.png"
+          className="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0"
           alt="sample page"
           role="img"
+          height="674"
+          width="901"
         />
       </div>
     </div>
