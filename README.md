@@ -2,7 +2,7 @@
 
 Example project using Next.js with the [Contentstack Delivery API](https://www.contentstack.com/docs/developers/apis/content-delivery-api/), deployed to [Vercel](https://vercel.com).
 
-![web](static/web.png)
+![web](./public/web.png)
 
 _Live Example: https://contentstack-nextjs-tailwind.vercel.app/_
 
