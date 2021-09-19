@@ -25,3 +25,17 @@ export const getPageBySlug = async (slug: string): Promise<PageFields> => {
   const result = await query.where('slug', slug).findOne()
   return result
 }
+
+export const getPages = async (): Promise<PageFields[]> => {
+  const query = client
+    .ContentType('page')
+    .Query()
+    .includeCount()
+    .includeContentType()
+    .includeReference(['components'])
+    .addParam('include_dimension', 'true')
+    .toJSON()
+  const result = await query.find()
+
+  return result[0]
+}

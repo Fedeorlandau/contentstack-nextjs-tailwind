@@ -12,15 +12,19 @@ _Live Example: https://contentstack-nextjs-tailwind.vercel.app/test_
 
 ### Env variables
 
-Remember to set up a `.env` file with your contentstack keys
+Remember to set up a `.env` file with your contentstack keys.
 
 ```env
 CONTENTSTACK_STACK_API_KEY=''
 CONTENTSTACK_ENVIRONMENT=''
 CONTENTSTACK_DELIVERY_TOKEN=''
 CONTENTSTACK_REGION='NA'
+NEXT_USE_SSR=1
 ```
 
+If you want to enable SSG please set `NEXT_USE_SSR=0`
+
+<p>
 Once you've created a project and installed dependencies with `yarn`, start a development server:
 
 ```bash

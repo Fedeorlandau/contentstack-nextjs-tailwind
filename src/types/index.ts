@@ -8,5 +8,6 @@ export interface EntryContentType extends Entry {
 
 export interface PageFields extends EntryContentType {
   title: string
+  slug: string
   components?: EntryContentType[]
 }
